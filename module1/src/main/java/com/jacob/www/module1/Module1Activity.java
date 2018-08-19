@@ -8,7 +8,8 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 
 import static com.jacob.www.basemodule.constant.ArouterUrlConstant.AROUTER_URL_MODULE1_MODULE1ACTIVITY;
 
-@Route(path = AROUTER_URL_MODULE1_MODULE1ACTIVITY, group = "module1")
+//@Route(path = AROUTER_URL_MODULE1_MODULE1ACTIVITY, group = "module2")// 重新命名分组
+@Route(path = AROUTER_URL_MODULE1_MODULE1ACTIVITY, extras = 2)// 添加额外信息
 public class Module1Activity extends AppCompatActivity {
 
     @Override

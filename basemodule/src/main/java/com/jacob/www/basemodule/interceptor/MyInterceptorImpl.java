@@ -20,7 +20,9 @@ public class MyInterceptorImpl implements IInterceptor {
 
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
-        callback.onInterrupt(null);
+        Log.e("MyInterceptorImpl", "拦截了");
+        // 获取额外信息
+        Log.e("MyInterceptorImpl",postcard.getExtra()+"");
         if (postcard.getGroup().equals("module1")) {
             postcard.withString("extra", "我是在拦截器中附加的参数");
             callback.onContinue(postcard);
